@@ -1,0 +1,129 @@
+/* Header */
+.header {
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Ajusta el título del header */
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Panel de notificaciones */
+.notificationPanel {
+    width: 300px; /* Ancho fijo para el panel de notificaciones */
+    height: 90vh; /* Cambia el largo a un 80% de la altura de la ventana */
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+    position: fixed;
+    top: 60px; /* El panel se posiciona debajo del header */
+    left: 0; /* Se mantiene en el borde izquierdo de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Ajusta las notificaciones */
+.notificationItem {
+    position: relative;
+    background-color: #f1f1f1;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+
+.notificationItem .date {
+    font-size: 12px; /* Reducir el tamaño del texto */
+    color: #7d7c7c; /* Cambiar el color para hacerlo más sutil */
+    position: absolute; /* Posicionamiento absoluto respecto al contenedor */
+    bottom: -5px;
+    right: 10px; /* Separación del borde derecho */
+}
+
+
+.notificationItem.received {
+    background-color: #9c9a9a; /* Rojo */
+}
+
+.notificationItem.responded {
+    border: 2px solid #32CD32; /* Verde */
+}
+
+.notificationItem.rejected {
+    border: 2px solid #FF0000; /* Rojo */
+}
+
+/* Chat lateral */
+.chatPanel {
+    width: calc(100% - 300px); /* Ocupa el resto del espacio después del panel de notificaciones */
+    height: calc(100vh - 60px); /* Calcula la altura para que no sobrepase el header */
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    position: fixed;
+    right: 0; /* Se mantiene en el borde derecho de la pantalla */
+    top: 60px; /* El chat se posiciona debajo del header */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.chatPanel h3 {
+    margin-bottom: 20px;
+}
+
+.chatPanel .buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.chatPanel .button {
+    flex: 1;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botón de logout */
+.logoutButton {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mainContent {
+    margin-left: 320px;
+    padding: 20px;
+}
+
+/* Productos */
+/* Detalles del producto */
+.productDetails {
+    margin-top: 20px;
+}
+
+.productImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
